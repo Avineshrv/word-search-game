@@ -339,7 +339,7 @@ const WordSearchGame = () => {
     };
 
     return (
-        <div>
+        <div className='flex'>
             <WordSearchGrid
                 grid={grid}
                 selectedCells={selectedCells}
@@ -348,9 +348,8 @@ const WordSearchGame = () => {
                 onCellMouseOver={handleCellMouseOver}
                 onMouseUp={handleMouseUp}
             />
-            <button onClick={handleHighlightAllWords}>Highlight All Words</button>
 
-            <div className="flex justify-center mt-4">
+            <div className="flex flex-col justify-center mt-4">
                 {words.map((word) => (
                     <button
                         key={word}
@@ -359,6 +358,8 @@ const WordSearchGame = () => {
                         {word}
                     </button>
                 ))}
+                    <button className='border px-4 py-2 mx-2 bg-purple-400' onClick={handleHighlightAllWords}>Highlight All Words</button>
+
             </div>
         </div>
     );
