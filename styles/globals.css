@@ -31,3 +31,10 @@ body {
     text-wrap: balance;
   }
 }
+
+.grid-arrangement {
+  grid-template-columns: repeat(20, 2.5rem); 
+  grid-template-rows: repeat(20, 2.5rem);  
+  gap: 1px; 
+  border: 1px solid black; 
+}
